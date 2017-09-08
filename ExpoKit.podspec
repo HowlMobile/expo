@@ -17,7 +17,7 @@ Pod::Spec.new do |s|
   s.subspec "Core" do |ss|
     ss.source_files = "ios/Exponent/**/*.{h,m}"
     ss.preserve_paths = "ios/Exponent/**/*.{h,m}"
-    ss.exclude_files = "ios/Exponent/EXAppDelegate.*", "ios/Exponent/EXRootViewController.*", "ios/Exponent/Supporting/**"
+    ss.exclude_files = "ios/Exponent/EXAppDelegate.*", "ios/Exponent/EXRootViewController.*", "ios/Exponent/Supporting/**", "ios/Exponent/Versioned/Modules/Api/EXGoogle.*"
 
     ss.dependency 'Amplitude-iOS', '~> 3.8'
     ss.dependency 'Analytics', '~> 3.5'
@@ -29,7 +29,6 @@ Pod::Spec.new do |s|
     ss.dependency 'FBSDKLoginKit', '~> 4.15'
     ss.dependency 'FBSDKShareKit', '~> 4.15'
     ss.dependency 'Fabric', '~> 1.6'
-    ss.dependency 'Google/SignIn', '~> 3.0'
     ss.dependency 'GoogleMaps', '~> 2.2.0'
     ss.dependency 'lottie-ios', '~> 1.5.1'
   end

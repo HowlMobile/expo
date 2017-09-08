@@ -11,7 +11,6 @@
 
 #import <Crashlytics/Crashlytics.h>
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
-#import <GoogleSignIn/GoogleSignIn.h>
 #import <GoogleMaps/GoogleMaps.h>
 #import <AppAuth.h>
 
@@ -179,12 +178,6 @@ NSString * const EXAppDidRegisterForRemoteNotificationsNotification = @"EXAppDid
 {
   if ([_currentAuthorizationFlow resumeAuthorizationFlowWithURL:url]) {
     _currentAuthorizationFlow = nil;
-    return YES;
-  }
-
-  if ([[GIDSignIn sharedInstance] handleURL:url
-                          sourceApplication:sourceApplication
-                                 annotation:annotation]) {
     return YES;
   }
 
